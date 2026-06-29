@@ -59,18 +59,6 @@ This repository is intended for educational and portfolio purposes. All propriet
 
 ---
 
-## Project Structure
-
-```
-src/
-include/
-lib/
-data/
-README.md
-```
-
----
-
 ## Main Functionalities
 
 * Initializes all hardware peripherals.
