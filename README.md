@@ -93,6 +93,20 @@ As the firmware developer on this project, I was responsible for:
 
 ---
 
+## About the Code in This Repository
+
+`LPG_Vending_Demo_Firmware.ino` is a **rewritten, sanitized demonstration** of the firmware architecture and control techniques I implemented — it is not the original client deployment. The following have been changed or removed:
+
+- Network configuration (IP/MAC) replaced with placeholder values
+- Modbus holding register map renumbered and simplified
+- Variable, function, and pin-label names generalized for clarity
+- Company- and client-specific references removed from comments
+- Per-core CPU load reporting (a diagnostic feature in the original) omitted for brevity
+
+The core architecture — dual-core FreeRTOS task split, Modbus TCP server, non-blocking stepper motor sequencing with obstruction sensing, load-cell weighing, and debounced multi-sensor safety logic — matches what I actually built and is preserved faithfully.
+
+---
+
 ## Status
 
 Functional firmware deployed and tested on physical hardware as part of an industrial automation product (Sway Automation & Technologies). Payment/transaction handling is managed by a separate system and integrates with this firmware via the Modbus interface.
